@@ -1,4 +1,4 @@
-name: Automated API tests using Postman CLI and Newman
+name: Automated JIRA API tests using Postman CLI and Newman
 
 on:
   push:  # Se ejecuta en cada push
@@ -27,13 +27,13 @@ jobs:
 
       - name: Download Postman collection using Postman API
         run: |
-          curl --location --request GET "https://api.getpostman.com/collections/33801345-5d9e4cce-b45e-4bf9-ad98-d0ee4cc254fb" \
+          curl --location --request GET "https://api.getpostman.com/collections/4771673-6f987a97-c7c6-4d3a-82f3-f6f7ef167d65" \
           --header "X-Api-Key: ${{ secrets.POSTMAN_API_KEY }}" \
           --output collection.json
 
       - name: Download Postman environment using Postman API
         run: |
-          curl --location --request GET "https://api.getpostman.com/environments/33801345-b6d6599f-f9a8-418c-91b1-fe6e63a48a95" \
+          curl --location --request GET "https://api.getpostman.com/environments/4771673-597946aa-4bbb-4d17-8d71-fe3ad9b66c3b" \
           --header "X-Api-Key: ${{ secrets.POSTMAN_API_KEY }}" \
           --output environment.json
 
