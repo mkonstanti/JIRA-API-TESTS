@@ -6,7 +6,7 @@ on:
       - main
   workflow_dispatch: {}  # Para ejecución manual
   schedule:
-    - cron: '0 0 * * 0'  # Se ejecuta todos los domingos a medianoche
+    - cron: '0 0 * * *'  # Se ejecuta todos los domingos a medianoche
 
 jobs:
   automated-api-tests:
